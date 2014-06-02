@@ -23,7 +23,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="30dp"
+                    android:id="@+id/login_frame"
                     >
         <EditText android:layout_width="match_parent"
                   android:layout_height="40dp"
@@ -68,5 +68,13 @@
                  android:id="@+id/loginBtn"/>
     </RelativeLayout>
     
+    <TextView android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"
+              android:gravity="center_vertical"
+              android:text="用户名"
+              android:layout_below="@id/login_frame"
+              android:textColor="#ff0000"/>
 
 </RelativeLayout>

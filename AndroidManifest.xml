@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity android:name="com.yhj.app.cms.controller.Waiting"
+                  android:theme="@style/pop_window_style"></activity>
     </application>
 
 </manifest>
