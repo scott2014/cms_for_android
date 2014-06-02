@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:gravity="center" 
+    android:background="#eee">
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:text="@string/system_name"
+              android:textSize="20sp"
+              android:textColor="#203C6D"
+              android:id="@+id/title"
+              android:typeface="monospace"
+              />
+    
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:background="#fff"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    >
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:background="@null"
+                  android:inputType="text"
+                  android:hint="@string/hint_username"
+                  android:paddingLeft="15dp"
+                  android:textSize="14sp"
+                  android:textColor="#000"
+                  android:id="@+id/username"
+                  />
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="#eee"
+              android:layout_below="@id/username"
+              android:id="@+id/line1"/>
+        
+         <EditText android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:background="@null"
+                  android:inputType="textPassword"
+                  android:hint="@string/hint_password"
+                  android:paddingLeft="15dp"
+                  android:textSize="14sp"
+                  android:textColor="#000"
+                  android:id="@+id/password"
+                  android:layout_below="@+id/line1"
+                  />
+         
+         <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="#eee"
+              android:layout_below="@id/password"
+              android:id="@+id/line2"/>
+         
+         <Button android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_below="@id/line2"
+                 android:text="@string/login"
+                 android:textSize="14sp"
+                 android:background="@drawable/login_selector"
+                 android:id="@+id/loginBtn"/>
+    </RelativeLayout>
+    
+
+</RelativeLayout>
