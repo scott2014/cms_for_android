@@ -27,6 +27,8 @@
         
         <activity android:name="com.yhj.app.cms.controller.Waiting"
                   android:theme="@style/pop_window_style"></activity>
+        
+        <activity android:name="com.yhj.app.cms.controller.Home"></activity>
     </application>
 
 </manifest>

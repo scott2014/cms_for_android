@@ -3,13 +3,16 @@ package com.yhj.app.cms;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.yhj.app.cms.controller.Waiting;
+import com.yhj.app.cms.model.task.LoginTask;
 
 public class Login extends Activity {
 	
@@ -20,8 +23,7 @@ public class Login extends Activity {
 	
 	private EditText mPassword = null;
 	
-	//login request code
-	private final int LOGIN_REQUEST_CODE = 0x1;
+	private TextView mTipView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +36,21 @@ public class Login extends Activity {
         
         this.mLoginBtn = (Button) this.findViewById(R.id.loginBtn);
         
+        this.mTipView = (TextView) this.findViewById(R.id.login_tip);
+        
         this.mLoginBtn.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(Login.this,Waiting.class);
 				
 				String username = mUsername.getText().toString();
 				String password = mPassword.getText().toString();
 				
-				intent.putExtra("username", username);
-				intent.putExtra("password", password);
+				Log.i("username",username);
+				Log.i("password",password);
 				
-				startActivityForResult(intent, LOGIN_REQUEST_CODE);
+				LoginTask task = new LoginTask(Login.this,mTipView);
+				task.execute(username,password);
 			}
 		});
     }
@@ -65,4 +69,6 @@ public class Login extends Activity {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 	}
+
+
 }

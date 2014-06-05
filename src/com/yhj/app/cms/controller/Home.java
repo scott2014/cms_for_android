@@ -1,19 +1,17 @@
 package com.yhj.app.cms.controller;
 
+import com.yhj.app.cms.R;
+
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.yhj.app.cms.R;
+public class Home extends Activity {
 
-public class Waiting extends Activity {
-	
-	public static Waiting instance = null;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
-		this.setContentView(R.layout.waiting);
-		instance = this;
+		setContentView(R.layout.home);
 	}
 }

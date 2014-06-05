@@ -73,8 +73,8 @@
               android:layout_marginLeft="30dp"
               android:layout_marginRight="30dp"
               android:gravity="center_vertical"
-              android:text="用户名"
               android:layout_below="@id/login_frame"
-              android:textColor="#ff0000"/>
+              android:textColor="#ff0000"
+              android:id="@+id/login_tip"/>
 
 </RelativeLayout>
